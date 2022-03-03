@@ -40,4 +40,11 @@ First steps in terraform environment.
 * output can (and should) be keep in separate file "output.tf"
 ## add load balancer
 * On AWS use ALB for web apps
-* 
+
+# Lesson 3
+## backend on S3 with locks
+* backet and dynamodb need to be created first  
+  than create terraform backend clause and init again  
+  this will move tfstate to S3
+* to remove remote backend - first migrate tfstate to local  
+  and then destroy resources using local tfstate
